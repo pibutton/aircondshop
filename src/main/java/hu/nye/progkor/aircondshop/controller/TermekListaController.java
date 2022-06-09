@@ -47,7 +47,7 @@ public class TermekListaController {
     public String createTermekListaForm(final Model model) {
 
         return "termek/create";
-        ;
+
     }
 
     @PostMapping("/create")

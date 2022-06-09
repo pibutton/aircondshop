@@ -28,7 +28,7 @@ public class TermekListaServiceImpl implements TermekListaService {
 
 
     @Override
-    public List<TermekLista> getAllTermekLista() {
+    public List<TermekLista> getAllTermekListak() {
         return Collections.unmodifiableList(DATA_BASE);
     }
 

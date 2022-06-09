@@ -20,7 +20,7 @@ public class TermekListaRestController {
 
     @GetMapping
     public List<TermekLista> getAllTermekListak() {
-    return termekListaService.getAllTermekLista();
+    return termekListaService.getAllTermekListak();
     }
 
     @GetMapping("/{id}")

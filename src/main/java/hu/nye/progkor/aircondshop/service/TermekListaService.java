@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface TermekListaService {
 
-    List<TermekLista> getAllTermekLista();
+    List<TermekLista> getAllTermekListak();
 
     TermekLista getTermekLista(Long id);
 

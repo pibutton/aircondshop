@@ -70,9 +70,12 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${4.0.0}</version>
+				<version>0.8.7</version>
 				<executions>
 				<execution>
 					<id>prepare-agent</id>
@@ -107,17 +110,17 @@
 				</excludes>
 				<rules>
 					<rule>
-						<element>${coverage.type}</element>
+						<element>BUNDLE</element>
 						<limits>
 							<limit>
 								<counter>LINE</counter>
 								<value>COVEREDRATIO</value>
-								<minimum>${coverage.lineLimit}</minimum>
+								<minimum>40%</minimum>
 							</limit>
 							<limit>
 								<counter>BRANCH</counter>
 								<value>COVEREDRATIO</value>
-								<minimum>${coverage.branchLimit}</minimum>
+								<minimum>40%</minimum>
 							</limit>
 						</limits>
 					</rule>
