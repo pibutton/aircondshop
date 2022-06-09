@@ -2,7 +2,7 @@ package hu.nye.progkor.aircondshop.model;
 
 import java.util.Objects;
 
-public class Termek {
+public class TermekLista {
 
 
     private Long id;
@@ -11,10 +11,10 @@ public class Termek {
     private EnergiaBesorolas energiabesorolas;
     private String kiegeszitok;
 
-    public Termek() {
+    public TermekLista() {
     }
 
-    public Termek(Long id, Marka marka, String ar, EnergiaBesorolas energiabesorolas, String kiegeszitok) {
+    public TermekLista(Long id, Marka marka, String ar, EnergiaBesorolas energiabesorolas, String kiegeszitok) {
         this.id = id;
         this.marka = marka;
         this.ar = ar;
@@ -66,12 +66,24 @@ public class Termek {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Termek termek = (Termek) o;
-        return Objects.equals(id, termek.id) && marka == termek.marka && Objects.equals(ar, termek.ar) && energiabesorolas == termek.energiabesorolas && Objects.equals(kiegeszitok, termek.kiegeszitok);
+        TermekLista termekLista = (TermekLista) o;
+        return Objects.equals(id, termekLista.id) && marka == termekLista.marka && Objects.equals(ar, termekLista.ar) && energiabesorolas == termekLista.energiabesorolas && Objects.equals(kiegeszitok, termekLista.kiegeszitok);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, marka, ar, energiabesorolas, kiegeszitok);
+    }
+
+    @Override
+    public String toString() {
+        return "TermekLista{" +
+                ", id=" + id +
+                ", marka=" + marka +
+                ", ar=" + ar +
+                ", energiabesorolas= " + energiabesorolas +
+                ", kiegeszitok=" + kiegeszitok +
+                '}';
+
     }
 }
